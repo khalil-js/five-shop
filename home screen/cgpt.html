@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Style Your Air Shoes | Nike</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Men's Style Your Air Shoes</h1>
+    </header>
+    <div class="filter-bar">
+        <input type="text" id="search" placeholder="Search for shoes..." onkeyup="filterProducts()">
+    </div>
+    <div class="product-grid" id="productGrid">
+        <div class="product">
+            <img src="shoe1.jpg" alt="Nike Air Max">
+            <h2>Nike Air Max</h2>
+            <p>$120</p>
+        </div>
+        <div class="product">
+            <img src="shoe2.jpg" alt="Nike Air Force 1">
+            <h2>Nike Air Force 1</h2>
+            <p>$110</p>
+        </div>
+        <div class="product">
+            <img src="shoe3.jpg" alt="Nike Air Jordan">
+            <h2>Nike Air Jordan</h2>
+            <p>$150</p>
+        </div>
+        <div class="product">
+            <img src="shoe4.jpg" alt="Nike React Vision">
+            <h2>Nike React Vision</h2>
+            <p>$130</p>
+        </div>
+        <div class="product">
+            <img src="shoe5.jpg" alt="Nike Dunk Low">
+            <h2>Nike Dunk Low</h2>
+            <p>$100</p>
+        </div>
+    </div>
+    <script>
+        function filterProducts() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let products = document.querySelectorAll(".product");
+            
+            products.forEach(product => {
+                let title = product.querySelector("h2").textContent.toLowerCase();
+                if (title.includes(input)) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        }
+    </script>
+  <style>/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+header {
+    background: black;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.filter-bar {
+    margin: 20px;
+}
+
+#search {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 16px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.product img {
+    width: 100%;
+}
+
+.product h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+</style>
+</body>
+</html>
+
