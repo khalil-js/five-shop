@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Details</title>
     <link rel="stylesheet" href="product.css" />
+    <link rel="stylesheet" href="cart.css" />
   </head>
   <body>
     <div class="hiring">
@@ -38,13 +39,47 @@
         </div>
       </div>
     </nav>
+    <div id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart" class="close-btn">&times;</button>
+      </div>
+
+      <!-- ------------------------------- -->
+
+      <div id="cart-items" class="cart-items">
+        <p class="empty-cart">Your cart is empty.</p>
+      </div>
+
+      <div class="cart-footer">
+        <span id="cart-total">Total: $0.00</span>
+        <button class="checkout-btn">Checkout</button>
+        <div class="client-info">
+          <input
+            type="text"
+            id="clientName"
+            placeholder="Enter your name"
+            required
+          />
+          <input
+            type="email"
+            id="clientEmail"
+            placeholder="Enter your email"
+            required
+          />
+          <p id="error-message" style="color: red; display: none">
+            Please fill in all fields.
+          </p>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="product-gallery">
-        <img id="mainImage" src="img/img3.jpeg" alt="Product Image" />
+        <img id="mainImage" src="img/" alt="Product Image" />
         <div class="thumbnails">
-          <img class="thumbnail" src="img/img3.jpeg" alt="Thumbnail 1" />
-          <img class="thumbnail" src="img/img3.jpeg" alt="Thumbnail 2" />
-          <img class="thumbnail" src="img/img4.jpg" alt="Thumbnail 3" />
+          <img class="thumbnail" src="img/" alt="Thumbnail 1" />
+          <img class="thumbnail" src="img/" alt="Thumbnail 2" />
+          <img class="thumbnail" src="img/" alt="Thumbnail 3" />
         </div>
       </div>
 
@@ -83,7 +118,7 @@
       <div class="product-card">
         <div class="cardimg">
           <img
-            src="clothes/Girocollo.jpeg"
+            src="clothes/shirt1.jpeg"
             alt="Product Name"
             class="product-img"
           />
@@ -98,7 +133,7 @@
         </div>
 
         <div class="product-info">
-          <h3 class="product-title">Stylish Hoodie</h3>
+          <h3 class="product-title">Stylish1</h3>
           <p class="product-description">
             Comfortable and trendy hoodie for all seasons.
           </p>
@@ -109,7 +144,7 @@
       <div class="product-card">
         <div class="cardimg">
           <img
-            src="clothes/Retro modello.jpeg"
+            src="clothes/pant2.jpeg"
             alt="Product Name"
             class="product-img"
           />
@@ -124,7 +159,7 @@
         </div>
 
         <div class="product-info">
-          <h3 class="product-title">Stylish Hoodie</h3>
+          <h3 class="product-title">Stylish 2</h3>
           <p class="product-description">
             Comfortable and trendy hoodie for all seasons.
           </p>
@@ -135,7 +170,7 @@
       <div class="product-card">
         <div class="cardimg">
           <img
-            src="clothes/Girocollo.jpeg"
+            src="clothes/sport3.jpeg"
             alt="Product Name"
             class="product-img"
           />
@@ -149,7 +184,7 @@
           </div>
         </div>
         <div class="product-info">
-          <h3 class="product-title">Stylish Hoodie</h3>
+          <h3 class="product-title">Stylish 3</h3>
           <p class="product-description">
             Comfortable and trendy hoodie for all seasons.
           </p>
@@ -160,7 +195,7 @@
       <div class="product-card">
         <div class="cardimg">
           <img
-            src="clothes/téléchargé (5).jpeg"
+            src="clothes/sweats4.jpeg"
             alt="Product Name"
             class="product-img"
           />
@@ -175,7 +210,7 @@
         </div>
 
         <div class="product-info">
-          <h3 class="product-title">Stylish Hoodie</h3>
+          <h3 class="product-title">Stylish 4</h3>
           <p class="product-description">
             Comfortable and trendy hoodie for all seasons.
           </p>
@@ -189,7 +224,7 @@
           <h2>Five Shop</h2>
           <p>© 2025 Five Shop - All Rights Reserved</p>
         </div>
-    
+
         <nav class="footer-links">
           <a href="#">Shop Now</a>
           <a href="#">Shipping & Returns</a>
@@ -197,15 +232,27 @@
           <a href="#">Privacy Policy</a>
           <a href="#">Contact Us</a>
         </nav>
-    
+
         <div class="social-links">
-          <a href="#" class="social-icon"><img src="icons/facebook.png" alt="Facebook"></a>
-          <a href="#" class="social-icon"><img src="icons/instagram.png" alt="Instagram"></a>
-          <a href="#" class="social-icon"><img src="icons/twitter.png" alt="Twitter"></a>
-          <a href="#" class="social-icon"><img src="icons/tiktok.png" alt="TikTok"></a>
+          <a href="#" class="social-icon"
+            ><img src="icons/facebook.png" alt="Facebook"
+          /></a>
+          <a href="#" class="social-icon"
+            ><img src="icons/instagram.png" alt="Instagram"
+          /></a>
+          <a href="#" class="social-icon"
+            ><img src="icons/twitter.png" alt="Twitter"
+          /></a>
+          <a href="#" class="social-icon"
+            ><img src="icons/tiktok.png" alt="TikTok"
+          /></a>
         </div>
       </div>
     </footer>
+    <button id="backToTop" class="back-to-top">up</button>
+    <script src="cart.js"></script>
+    <script src="search.js"></script>
+    <script src="productcard.js"></script>
     <script src="product.js"></script>
   </body>
 </html>

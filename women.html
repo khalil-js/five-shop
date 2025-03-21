@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="women.css" />
+    <link rel="stylesheet" href="cart.css" />
   </head>
   <body>
     <div class="hiring">
@@ -25,6 +26,23 @@
           <li><a id="navbtnwomen" href="women.html">Women</a></li>
         </ul>
       </div>
+      <div class="filter-dropdown">
+        <select id="filter-category">
+          <option value="all">All Categories</option>
+          <option value="shirts">Shirts</option>
+          <option value="pants">Pants</option>
+          <option value="vestes">Vestes</option>
+          <option value="sweat-shirts">Sweat-Shirts</option>
+          <option value="sweaters">Sweaters</option>
+          <option value="sport">Sport Shoes</option>
+          <option value="classique">Classique</option>
+          <option value="football">Football Shoes</option>
+          <option value="for winter">for Winter</option>
+          <option value="lunettes">Lunettes</option>
+          <option value="sac a dos">sac a dos</option>
+          <option value="caquettes">Caquettes</option>
+        </select>
+      </div>
       <input type="search" placeholder="Search..." id="search" />
       <div></div>
       <div class="nav-mini">
@@ -38,9 +56,44 @@
         </div>
       </div>
     </nav>
+    <div id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart" class="close-btn">&times;</button>
+      </div>
+
+      <!-- Client Information Inputs -->
+
+      <div id="cart-items" class="cart-items">
+        <p class="empty-cart">Your cart is empty.</p>
+      </div>
+
+      <div class="cart-footer">
+        <span id="cart-total">Total: $0.00</span>
+        <button class="checkout-btn">Checkout</button>
+        <div class="client-info">
+          <input
+            type="text"
+            id="clientName"
+            placeholder="Enter your name"
+            required
+          />
+          <input
+            type="email"
+            id="clientEmail"
+            placeholder="Enter your email"
+            required
+          />
+          <p id="error-message" style="color: red; display: none">
+            Please fill in all fields.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <section class="product-grid" id="products">
       <div class="product0">
-        <img src="img/X.jpeg" alt="Product 1" />
+        <img src="img/x (2).jpeg" alt="Product 1" />
       </div>
       <a class="trending" href="#chausure">Our new sneakers collection</a>
     </section>
@@ -53,37 +106,11 @@
       </div>
 
       <div class="product-container">
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              0
-              src="clothes/Girocollo.jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$89.99</span>
-          </div>
-        </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="shirts">
           <div class="cardimg">
             <img
-              src="clothes/Retro modello.jpeg"
+              src="clothes/shirt1.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -98,7 +125,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">Shirt1</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -106,10 +133,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="shirts">
           <div class="cardimg">
             <img
-              src="clothes/Girocollo.jpeg"
+              src="clothes/shirt2.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -123,7 +150,7 @@
             </div>
           </div>
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">Shirt2</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -131,10 +158,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="shirts">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/shirt3.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -149,17 +176,17 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">Shirt3</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
             <span class="product-price">$49.99</span>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" id="shirts">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/shirt4.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -174,82 +201,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">Shirt4</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -264,37 +216,11 @@
       </div>
 
       <div class="product-container">
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              0
-              src="clothes/Girocollo.jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$89.99</span>
-          </div>
-        </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="pants">
           <div class="cardimg">
             <img
-              src="clothes/Retro modello.jpeg"
+              src="clothes/pant1.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -309,7 +235,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">pants1</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -317,10 +243,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="pants">
           <div class="cardimg">
             <img
-              src="clothes/Girocollo.jpeg"
+              src="clothes/pant2.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -334,7 +260,7 @@
             </div>
           </div>
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">pants2</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -342,10 +268,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="pants">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/pant3.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -360,17 +286,17 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">pants3</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
             <span class="product-price">$49.99</span>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" id="pants">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/pant4.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -385,82 +311,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">pants4</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -475,37 +326,11 @@
       </div>
 
       <div class="product-container">
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              0
-              src="clothes/Girocollo.jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$89.99</span>
-          </div>
-        </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="vestes">
           <div class="cardimg">
             <img
-              src="clothes/Retro modello.jpeg"
+              src="clothes/vest1.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -520,7 +345,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">vestes1</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -528,10 +353,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="vestes">
           <div class="cardimg">
             <img
-              src="clothes/Girocollo.jpeg"
+              src="clothes/vest2.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -545,7 +370,7 @@
             </div>
           </div>
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">vestes2</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -553,10 +378,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="vestes">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/vest3.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -571,17 +396,17 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">vestes3</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
             <span class="product-price">$49.99</span>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" id="vestes">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/vest4.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -596,82 +421,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">vestes4</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -686,37 +436,11 @@
       </div>
 
       <div class="product-container">
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              0
-              src="clothes/Girocollo.jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$89.99</span>
-          </div>
-        </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="sweat-shirts">
           <div class="cardimg">
             <img
-              src="clothes/Retro modello.jpeg"
+              src="clothes/sweats1.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -731,7 +455,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">sweat-shirts1</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -739,10 +463,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="sweat-shirts">
           <div class="cardimg">
             <img
-              src="clothes/Girocollo.jpeg"
+              src="clothes/sweats2.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -756,7 +480,7 @@
             </div>
           </div>
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">sweat-shirts2</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -764,10 +488,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="sweat-shirts">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/sweats3.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -782,17 +506,17 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">sweat-shirts3</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
             <span class="product-price">$49.99</span>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" id="sweat-shirts">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/sweats4.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -807,82 +531,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">sweat-shirts4</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -897,11 +546,10 @@
       </div>
 
       <div class="product-container">
-        <div class="product-card">
+        <div class="product-card" id="sweaters">
           <div class="cardimg">
             <img
-              0
-              src="clothes/Girocollo.jpeg"
+              src="clothes/sweater1.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -916,33 +564,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$89.99</span>
-          </div>
-        </div>
-        <!-- ---------------!-- -->
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/Retro modello.jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">sweaters1</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -950,10 +572,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="sweaters">
           <div class="cardimg">
             <img
-              src="clothes/Girocollo.jpeg"
+              src="clothes/sweater2.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -967,7 +589,7 @@
             </div>
           </div>
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">sweaters2</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -975,10 +597,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="sweaters">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/sweater3.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -993,17 +615,17 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">sweaters3</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
             <span class="product-price">$49.99</span>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" id="sweaters">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/sweater4.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -1018,82 +640,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">sweaters4</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -1111,37 +658,11 @@
       </div>
 
       <div class="product-container">
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              0
-              src="clothes/Girocollo.jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$89.99</span>
-          </div>
-        </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="sport">
           <div class="cardimg">
             <img
-              src="clothes/Retro modello.jpeg"
+              src="clothes/sport1.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -1156,7 +677,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">sport1</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -1164,10 +685,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="sport">
           <div class="cardimg">
             <img
-              src="clothes/Girocollo.jpeg"
+              src="clothes/sport2.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -1181,7 +702,7 @@
             </div>
           </div>
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">sport2</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -1189,10 +710,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="sport">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/sport3.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -1207,17 +728,17 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">sport3</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
             <span class="product-price">$49.99</span>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" id="sport">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/sport4.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -1232,82 +753,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">sport4</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -1322,37 +768,11 @@
       </div>
 
       <div class="product-container">
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              0
-              src="clothes/Girocollo.jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$89.99</span>
-          </div>
-        </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="classique">
           <div class="cardimg">
             <img
-              src="clothes/Retro modello.jpeg"
+              src="clothes/class1.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -1367,7 +787,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">classique1</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -1375,10 +795,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="classique">
           <div class="cardimg">
             <img
-              src="clothes/Girocollo.jpeg"
+              src="clothes/class2.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -1392,7 +812,7 @@
             </div>
           </div>
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">classique2</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -1400,10 +820,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="classique">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/class3.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -1418,17 +838,17 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">classique3</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
             <span class="product-price">$49.99</span>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" id="classique">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/class4.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -1443,82 +863,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">classique4</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -1533,37 +878,11 @@
       </div>
 
       <div class="product-container">
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              0
-              src="clothes/Girocollo.jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$89.99</span>
-          </div>
-        </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="football">
           <div class="cardimg">
             <img
-              src="clothes/Retro modello.jpeg"
+              src="clothes/foot1.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -1578,7 +897,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">football 1</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -1586,10 +905,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="football">
           <div class="cardimg">
             <img
-              src="clothes/Girocollo.jpeg"
+              src="clothes/foot2.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -1603,7 +922,7 @@
             </div>
           </div>
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">football 2</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -1611,10 +930,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="football">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/foot3.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -1629,17 +948,17 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">football 4</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
             <span class="product-price">$49.99</span>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" id="football">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/foot4.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -1654,82 +973,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">football 4</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -1744,37 +988,11 @@
       </div>
 
       <div class="product-container">
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              0
-              src="clothes/Girocollo.jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$89.99</span>
-          </div>
-        </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="for winter">
           <div class="cardimg">
             <img
-              src="clothes/Retro modello.jpeg"
+              src="clothes/winter1.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -1789,7 +1007,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">for winter1</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -1797,10 +1015,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="for winter">
           <div class="cardimg">
             <img
-              src="clothes/Girocollo.jpeg"
+              src="clothes/winter2.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -1814,7 +1032,7 @@
             </div>
           </div>
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">for winter2</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -1822,10 +1040,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="for winter">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/winter3.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -1840,17 +1058,17 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">for winter3</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
             <span class="product-price">$49.99</span>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" id="for winter">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/winter4.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -1865,82 +1083,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">for winter4</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -1949,47 +1092,21 @@
         </div>
       </div>
     </section>
-    <!-- Footer -->
+    <!-- ---------------- -->
     <div id="title">
       <h1><a class="mentitle" href="">accessoires -></a></h1>
     </div>
     <section class="section">
       <div id="title">
-        <h2><a id="mentitle" href=""> lunettes </a></h2>
+        <h2><a id="mentitle" href=""> glasses </a></h2>
       </div>
 
       <div class="product-container">
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              0
-              src="clothes/Girocollo.jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$89.99</span>
-          </div>
-        </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="lunettes">
           <div class="cardimg">
             <img
-              src="clothes/Retro modello.jpeg"
+              src="clothes/glass1.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -2004,7 +1121,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">lunettes1</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -2012,10 +1129,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="lunettes">
           <div class="cardimg">
             <img
-              src="clothes/Girocollo.jpeg"
+              src="clothes/glass2.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -2029,7 +1146,7 @@
             </div>
           </div>
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">lunettes2</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -2037,10 +1154,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="lunettes">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/glass3.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -2055,17 +1172,17 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">lunettes3</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
             <span class="product-price">$49.99</span>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" id="lunettes">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/glass4.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -2080,82 +1197,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">lunettes4</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -2170,37 +1212,11 @@
       </div>
 
       <div class="product-container">
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              0
-              src="clothes/Girocollo.jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$89.99</span>
-          </div>
-        </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="sac a dos">
           <div class="cardimg">
             <img
-              src="clothes/Retro modello.jpeg"
+              src="clothes/sac1.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -2215,7 +1231,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">sac a dos1</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -2223,10 +1239,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="sac a dos">
           <div class="cardimg">
             <img
-              src="clothes/Girocollo.jpeg"
+              src="clothes/sac2.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -2240,7 +1256,7 @@
             </div>
           </div>
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">sac a dos2</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -2248,10 +1264,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="sac a dos">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/sac3.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -2266,17 +1282,17 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">sac a dos3</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
             <span class="product-price">$49.99</span>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" id="sac a dos">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/sac4.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -2291,82 +1307,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">sac a dos4</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -2381,37 +1322,11 @@
       </div>
 
       <div class="product-container">
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              0
-              src="clothes/Girocollo.jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$89.99</span>
-          </div>
-        </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="caquettes">
           <div class="cardimg">
             <img
-              src="clothes/Retro modello.jpeg"
+              src="clothes/cas1.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -2426,7 +1341,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">caquettes1</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -2434,10 +1349,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="caquettes">
           <div class="cardimg">
             <img
-              src="clothes/Girocollo.jpeg"
+              src="clothes/cas2.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -2451,7 +1366,7 @@
             </div>
           </div>
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">caquettes2</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -2459,10 +1374,10 @@
           </div>
         </div>
         <!-- ---------------!-- -->
-        <div class="product-card">
+        <div class="product-card" id="caquettes">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/cas3.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -2477,17 +1392,17 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">caquettes3</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
             <span class="product-price">$49.99</span>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" id="caquettes">
           <div class="cardimg">
             <img
-              src="clothes/téléchargé (5).jpeg"
+              src="clothes/cas4.jpeg"
               alt="Product Name"
               class="product-img"
             />
@@ -2502,82 +1417,7 @@
           </div>
 
           <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
-            <p class="product-description">
-              Comfortable and trendy hoodie for all seasons.
-            </p>
-            <span class="product-price">$49.99</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="cardimg">
-            <img
-              src="clothes/téléchargé (5).jpeg"
-              alt="Product Name"
-              class="product-img"
-            />
-            <div class="product-actions">
-              <button class="btn cart-btn">
-                <img src="icons/shopping-bag.png" alt="" />
-              </button>
-              <button class="btn fav-btn">
-                <img src="icons/favourite.png" alt="Favorite" />
-              </button>
-            </div>
-          </div>
-
-          <div class="product-info">
-            <h3 class="product-title">Stylish Hoodie</h3>
+            <h3 class="product-title">caquettes4</h3>
             <p class="product-description">
               Comfortable and trendy hoodie for all seasons.
             </p>
@@ -2639,7 +1479,10 @@
         </div>
       </div>
     </footer>
-
+    <button id="backToTop" class="back-to-top">up</button>
+    <script src="cart.js"></script>
+    <script src="search.js"></script>
+    <script src="productcard.js"></script>
     <script src="product.js"></script>
   </body>
 </html>

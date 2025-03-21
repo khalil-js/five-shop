@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="cart.css" />
   </head>
   <body>
     <div class="hiring">
@@ -30,7 +31,7 @@
       <div class="nav-mini">
         <div class="nav-actions">
           <button class="btn" id="btn-fav">
-            <img src="icons/favourite.png" alt="Favorites" />
+            <a href=""><img src="icons/favourite.png" alt="Favorites" /></a>
           </button>
           <button class="btn" id="btn-cart">
             <img src="icons/shopping-bag.png" alt="Cart" />
@@ -38,8 +39,41 @@
         </div>
       </div>
     </nav>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart" class="close-btn">X</button>
+      </div>
+
+      <div id="cart-items" class="cart-items">
+        <p class="empty-cart">Your cart is empty.</p>
+      </div>
+
+      <div class="cart-footer">
+        <span id="cart-total">Total: $0.00</span>
+        <button class="checkout-btn">Checkout</button>
+        <div class="client-info">
+          <input
+            type="text"
+            id="clientName"
+            placeholder="Enter your name"
+            required
+          />
+          <input
+            type="email"
+            id="clientEmail"
+            placeholder="Enter your email"
+            required
+          />
+          <p id="error-message" style="color: red; display: none">
+            Please fill in all fields.
+          </p>
+        </div>
+      </div>
+    </div>
     <!-- ---------------!-- -->
-    <section class="product-grid" id="products">
+    <section class="product-grid">
       <div class="product">
         <img
           src="img/pexels-lucas-toyes-706110023-18398399.jpg"
@@ -64,7 +98,110 @@
       <h3>Don't miss the chance !</h3>
     </div>
     <!-- ---------------!-- -->
-    <div class="product-container"></div>
+    <div class="product-container">
+      <!-- ---------------!-- -->
+      <div class="product-card">
+        <div class="cardimg">
+          <img
+            src="clothes/shirt4.jpeg"
+            alt="Product Name"
+            class="product-img"
+          />
+          <div class="product-actions">
+            <button class="btn cart-btn">
+              <img src="icons/shopping-bag.png" alt="" />
+            </button>
+            <button class="btn fav-btn">
+              <img src="icons/favourite.png" alt="Favorite" />
+            </button>
+          </div>
+        </div>
+
+        <div class="product-info">
+          <h3 class="product-title">shirt</h3>
+          <p class="product-description">
+            Comfortable and trendy hoodie for all seasons.
+          </p>
+          <span class="product-price">$49.99</span>
+        </div>
+      </div>
+      <!-- ---------------!-- -->
+      <div class="product-card">
+        <div class="cardimg">
+          <img
+            src="clothes/pant3.jpeg"
+            alt="Product Name"
+            class="product-img"
+          />
+          <div class="product-actions">
+            <button class="btn cart-btn">
+              <img src="icons/shopping-bag.png" alt="" />
+            </button>
+            <button class="btn fav-btn">
+              <img src="icons/favourite.png" alt="Favorite" />
+            </button>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-title">pant</h3>
+          <p class="product-description">
+            Comfortable and trendy hoodie for all seasons.
+          </p>
+          <span class="product-price">$49.99</span>
+        </div>
+      </div>
+      <!-- ---------------!-- -->
+      <div class="product-card">
+        <div class="cardimg">
+          <img
+            src="clothes/sport1.jpeg"
+            alt="Product Name"
+            class="product-img"
+          />
+          <div class="product-actions">
+            <button class="btn cart-btn">
+              <img src="icons/shopping-bag.png" alt="" />
+            </button>
+            <button class="btn fav-btn">
+              <img src="icons/favourite.png" alt="Favorite" />
+            </button>
+          </div>
+        </div>
+
+        <div class="product-info">
+          <h3 class="product-title">shoes</h3>
+          <p class="product-description">
+            Comfortable and trendy hoodie for all seasons.
+          </p>
+          <span class="product-price">$49.99</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="cardimg">
+          <img
+            src="clothes/sweater2.jpeg"
+            alt="Product Name"
+            class="product-img"
+          />
+          <div class="product-actions">
+            <button class="btn cart-btn">
+              <img src="icons/shopping-bag.png" alt="" />
+            </button>
+            <button class="btn fav-btn">
+              <img src="icons/favourite.png" alt="Favorite" />
+            </button>
+          </div>
+        </div>
+
+        <div class="product-info">
+          <h3 class="product-title">sweater</h3>
+          <p class="product-description">
+            Comfortable and trendy hoodie for all seasons.
+          </p>
+          <span class="product-price">$49.99</span>
+        </div>
+      </div>
+    </div>
 
     <!-- ---------------!-- -->
     <div class="news" id="cards">
@@ -80,12 +217,13 @@
         <a href="women.html" class="menbtn">Woman</a>
       </div>
 
-      
-        <img class="five2" src="img/Adobe Express - file - Copie.png" alt="" />
-      
+      <img class="five2" src="img/Adobe Express - file - Copie.png" alt="" />
 
       <div class="image-container">
-        <img src="img/img4.jpg" alt="" />
+        <img
+          src="img/Stay Warm and Stylish_ Casual Winter Outfits for Men! 160.jpeg"
+          alt=""
+        />
         <a href="men.html" class="menbtn">Men</a>
       </div>
     </div>
@@ -121,6 +259,9 @@
         </div>
       </div>
     </footer>
+    <button id="backToTop" class="back-to-top">porn up</button>
+    <script src="cart.js"></script>
+    <script src="search.js"></script>
     <script src="productcard.js"></script>
     <script src="product.js"></script>
   </body>

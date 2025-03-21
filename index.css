@@ -1,10 +1,14 @@
 body {
-  background-color: #1a1a1a;
-  margin: 1px;
+  background-image: url('img/b3865620-b534-4db4-ad91-8157d6b0c38d.jpeg');
+
+ 
   font-family: Arial, sans-serif;
   color: #fff;
-  
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
+
 /*----------------------------------------------------------------*/
 .hiring {
   background-color: #444;
@@ -23,13 +27,12 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 20px 20px 20px 5px;
-  background: #222;
+  background: url('img/téléchargé (4).jpeg');
   margin: 0px 0px;
   max-width: 100%;
 }
 
 .logo {
- 
   width: 200px;
   margin-right: 10px;
 }
@@ -60,15 +63,21 @@ body {
   flex-grow: 10;
   max-width: 600px;
   padding: 10px;
-  border: 2px #000000 double;
+  border: none;
   border-radius: 20px;
   font-size: 16px;
   background-color: #333;
   color: #fff;
   text-align: left;
+  text-decoration: none;
 }
-#search :hover {
-  border-color: #000;
+#search:hover {
+  background-color: #3a3a3a;
+  border-color: #991919;
+  transform: scaleX(1.01);
+}
+#search:focus {
+  border: 5px black;
 }
 .nav-mini {
   display: flex;
@@ -87,11 +96,62 @@ body {
   background: none;
   border: none;
   cursor: pointer;
+  filter: invert(1);
 }
 
 .btn img {
   width: 24px;
   height: 24px;
+}
+/*-------------------------------------*/
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100px;
+  background: white;
+  box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.cart-sidebar.show {
+  right: 0;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.cart-items {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.cart-footer {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.empty-cart {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
 }
 
 /*-------------------------------*/
@@ -162,7 +222,6 @@ body {
   background: #333;
   color: #fff;
   padding: 5px 5px 5px 10%;
-  
 }
 
 .news h1 h3 {
@@ -173,35 +232,31 @@ body {
 /*----------------------------------------------------------------*/
 .product-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 10px;
   margin: 20px 0px;
   width: 100%;
-  height: fit-content;
 }
 
 .product-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: space-between;
-  padding: 0px 0px;
-  border-radius: 0px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  width: 19%;
-  height: 500px;
+  width: 19%px;
+  height: fit-content;
+  border-radius: 20px;
 }
 
 .product-card:hover {
   transform: scale(1.01);
+  transition: transform 0.3s;
 }
 
 .product-img {
-  width: 100%;
+  width: 100%px;
   height: 400px;
   position: relative;
+  border-radius: 20px 0px;
 }
 .cardimg {
   position: relative;
@@ -217,14 +272,12 @@ body {
   width: 100%;
 }
 .product-actions .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
   padding: 10px 15px;
   cursor: pointer;
   font-size: 14px;
   border-radius: 5px;
+  border: none;
+  transition: background 0.3s;
 }
 .product-actions .btn img {
   width: 20px;
@@ -235,62 +288,43 @@ body {
 .cart-btn {
   color: #000;
   font-weight: bold;
-  transition: background 0.3s;
-  border: none;
   border-radius: 30px;
 }
 
 .cart-btn:hover {
-  background: #0c330577;
+  background: #0b2e0877;
 }
-
 .fav-btn {
-  background: transparent;
-  border: 1px solid #681614;
+  border: 1px solid #000000;
 }
-.btn-fav:hover {
+.fav-btn:hover {
   background-color: #630404;
 }
-
-.fav-btn img {
-  width: 20px;
-  height: 20px;
-}
 .product-info {
-  margin-top: 3px;
+  margin: 5px 0 0 5px;
 }
 
 .product-title {
   font-size: 18px;
   font-weight: bold;
   color: #fff;
-
-  margin: 0px 0px 5px 0px;
+  margin: 0;
 }
 
 .product-description {
   font-size: 14px;
   color: #bbb;
-  margin-bottom: 10px;
+  margin: 5px 0;
 }
 
 .product-price {
   font-size: 20px;
-  color: #ffcc00;
+  color: #0a6400;
   font-weight: bold;
   display: block;
-  margin-bottom: 10px;
+  margin: 0px 0 5px 0;
 }
 /*----------------------------------------------------------------*/
-
-.five2 {
-
-  height: 1150px;
-  position: relative;
-  
-}
-
-
 
 
 
@@ -311,7 +345,11 @@ body {
   height: auto;
   display: block;
 }
+.five2 {
+  max-height: 1150px;
+  position: relative;
 
+}
 .menbtn {
   position: absolute;
   bottom: 10%;
@@ -342,7 +380,7 @@ body {
 }
 /*-------------------------------------*/
 .footer {
-  background-color: #222;
+  background-color: url('img/ad387205-3aa5-4875-ae24-cd84f96225cf.jpeg');
   color: #fff;
   padding: 20px 10px;
   text-align: center;
@@ -400,16 +438,15 @@ body {
 .social-icon:hover img {
   transform: scale(1.2);
 }
-/*----------------------------------------*/
 
+/*-----------------------------------------*/
 @media (max-width: 1200px) {
   .five2 {
     max-height: 900px;
   }
   .hero {
-    
     top: 35%;
-    
+
     max-width: 600px;
   }
 
@@ -431,7 +468,7 @@ body {
     gap: 20px;
   }
   .product-card {
-    width: 30%;
+    width: 30%px;
   }
   .five2 {
     max-height: 800px;
@@ -450,7 +487,6 @@ body {
     gap: 15px;
   }
   .hero {
-    
     max-width: 500px;
   }
 
@@ -472,7 +508,7 @@ body {
     gap: 15px;
   }
   .product-card {
-    width: 45%;
+    width: 45%px;
   }
   .five2 {
     max-height: 600px;
@@ -497,7 +533,7 @@ body {
     align-items: center;
   }
   .product-card {
-    width: 80%;
+    width: 80%px;
   }
   .hero {
     left: 10%;
@@ -525,7 +561,6 @@ body {
     flex-direction: column;
     align-items: center;
   }
-
 }
 
 @media (max-width: 600px) {
@@ -561,7 +596,7 @@ body {
     align-items: center;
   }
   .product-card {
-    width: 90%;
+    width: 90%px;
   }
   .five2 {
     max-height: 400px;
@@ -609,16 +644,12 @@ body {
     max-height: 300px;
   }
 }
+/*----------------------------------------*/
 
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 600px) {
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}

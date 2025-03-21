@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("go", () => {
   const mainImage = document.getElementById("mainImage");
   const thumbnails = document.querySelectorAll(".thumbnails");
   const addToCartBtn = document.getElementById("addToCart");
@@ -65,4 +65,24 @@ document.addEventListener("DOMContentLoaded", function () {
       thumbnailsContainer.appendChild(thumbImg);
     });
   }
+});
+
+/*------------------------------------*/
+document.addEventListener("scroll", function () {
+  const backToTopBtn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      backToTopBtn.style.display = "flex"; 
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
 });
